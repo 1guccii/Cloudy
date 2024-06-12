@@ -22,6 +22,19 @@ val Typography = Typography(
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp,
         color = Color(0xFFFFFFFF)
-    )
+    ),
+    labelSmall = TextStyle(
+        fontSize = 24.sp,
+        fontFamily = FontFamily(poppins_medium),
+        fontWeight = FontWeight(700),
+        color = Color(0xFFFFFFFF),
+        letterSpacing = 0.3.sp,
+    ),
+    titleSmall = TextStyle(
+        fontSize = 14.sp,
+        fontFamily = FontFamily(poppins_regular),
+        fontWeight = FontWeight(400),
+        color = Color(0xFFFFFFFF),
+        letterSpacing = 0.3.sp)
 
 )

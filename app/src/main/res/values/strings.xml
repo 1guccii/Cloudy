@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Cloudy</string>
+    <string name="current_location">Current Location</string>
+    <string name="add_location">Add Location</string>
+    <string name="location_1">Ha Dong, Ha Noi</string>
+    <string name="location_2">Long Bien, Ha Noi</string>
+    <string name="location_3">Ba Dinh, Ha Noi</string>
+    <string name="location_4">My Dinh, Ha Noi</string>
+    <string name="location_5">Hoan Kiem, Ha Noi</string>
 
 </resources>

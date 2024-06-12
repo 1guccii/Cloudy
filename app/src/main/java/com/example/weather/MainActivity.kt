@@ -12,7 +12,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.weather.ui.theme.WeatherTheme
+import com.example.weather.ui.theme.screens.HomeSizeBarScreen
 import com.example.weather.ui.theme.screens.SplashScreen
+import com.example.weather.ui.theme.screens.TestScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +22,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             WeatherTheme {
-                SplashScreen()
+                HomeSizeBarScreen()
             }
         }
     }
@@ -31,6 +33,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingPreview() {
     WeatherTheme {
-        SplashScreen()
+        HomeSizeBarScreen()
     }
 }
