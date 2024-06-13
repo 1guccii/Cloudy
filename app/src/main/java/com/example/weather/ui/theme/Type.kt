@@ -35,6 +35,13 @@ val Typography = Typography(
         fontFamily = FontFamily(poppins_regular),
         fontWeight = FontWeight(400),
         color = Color(0xFFFFFFFF),
-        letterSpacing = 0.3.sp)
+        letterSpacing = 0.3.sp
+    ),
+    bodyLarge = TextStyle(
+        fontSize = 24.sp,
+        fontFamily = FontFamily(poppins_bold),
+        fontWeight = FontWeight(900),
+        color = Color(0xFFFFFFFF),
+        )
 
 )
