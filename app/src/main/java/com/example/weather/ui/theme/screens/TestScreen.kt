@@ -1,30 +1,33 @@
 package com.example.weather.ui.theme.screens
 
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Arrangement
+
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.draw.scale
-import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.vectorResource
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.weather.R
-import java.lang.reflect.Modifier
+import com.example.weather.ui.theme.Typography
+import com.example.weather.viemodel.WeatherViewModel
 
 @Composable
-fun TestScreen() {
-    Column(modifier = androidx.compose.ui.Modifier.fillMaxSize(1f), horizontalAlignment = androidx.compose.ui.Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
-        Image(painter = painterResource(id = R.drawable.sun), contentDescription = null)
+fun TestScreen(viewModel: WeatherViewModel) {
+    viewModel.getWeatherData(233.4,5344.4)
+    Column(
+        modifier = Modifier.fillMaxSize(1f).background(Color.White)
+    ) {
+        Text(text = "", style = Typography.displayLarge)
     }
 }
-
 @Preview
 @Composable
 fun TestScreenPreview() {
-    Surface {
-    TestScreen()
+    Column(
+        modifier = Modifier.fillMaxSize(1f)
+    ) {
+
     }
 }
+

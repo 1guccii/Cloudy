@@ -6,6 +6,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import com.example.weather.R
 
@@ -41,7 +42,29 @@ val Typography = Typography(
         fontSize = 24.sp,
         fontFamily = FontFamily(poppins_bold),
         fontWeight = FontWeight(900),
+        color = Color(0xFFFFFFFF)
+    ),
+    displaySmall = TextStyle(
+        fontSize = 10.sp,
+        fontFamily = FontFamily(poppins_regular),
+        fontWeight = FontWeight(400),
         color = Color(0xFFFFFFFF),
-        )
+        letterSpacing = 0.3.sp
+    ),
+    bodySmall = TextStyle(
+        fontSize = 16.sp,
+        fontFamily = FontFamily(poppins_bold),
+        fontWeight = FontWeight(600),
+        color = Color(0xFF363B64),
+        letterSpacing = 0.3.sp,
+    ),
+    titleMedium = TextStyle(
+        fontSize = 16.sp,
+        fontFamily = FontFamily(poppins_bold),
+        fontWeight = FontWeight(600),
+        color = Color(0xFF363B64),
+        textAlign = TextAlign.Center,
+        letterSpacing = 0.05.sp,
+    )
 
 )

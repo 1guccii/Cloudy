@@ -1,13 +1,17 @@
 package com.example.weather.data.remote
 
+
+
+import retrofit2.Call
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-private const val baseURL = "v1/forecast?&hourly=temperature_2m,relative_humidity_2m,rain,wind_speed_10m,weather_code&timezone=Asia%2FBangkok"
 interface WeatherApi {
-    @GET(baseURL)
-    suspend fun getWeatherData(
-        @Query ("latitude") latitude: Double,
-        @Query ("longitude") longitude: Double,
-        )
+    @GET("v1/forecast")
+    suspend fun getCurrentWeatherData(
+        @Query("latitude") latitude: Double,
+        @Query("longitude") longitude: Double,
+        @Query("current") current:String = "temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m",
+    ) : CurrentWeather
 }
