@@ -8,5 +8,6 @@
     <string name="location_4">My Dinh, Ha Noi</string>
     <string name="location_5">Hoan Kiem, Ha Noi</string>
     <string name="partly_cloudy">Partly Cloudy</string>
+    <string name="new_information">Here’s what to expect from Tuesday weather forecast</string>
 
 </resources>

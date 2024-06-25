@@ -1,8 +1,6 @@
 package com.example.weather.viemodel
 
-
-
-
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -12,16 +10,28 @@ import com.example.weather.network.RetrofitClient
 import kotlinx.coroutines.launch
 
 
-// ViewModel sử dụng Retrofit để gọi API và lưu trữ dữ liệu
 class WeatherViewModel : ViewModel() {
-    private val _weatherData = MutableLiveData<CurrentWeather>()
+    private val _weatherData =  MutableLiveData<CurrentWeather>()
     val weatherData: LiveData<CurrentWeather>
         get() = _weatherData
 
-    fun getWeatherData(latitude: Double, longitude: Double) {
+    private val latitude = 20.625
+    private val longitude = 106.125
+    fun fetchData() {
         viewModelScope.launch {
-            val retrofitClient = RetrofitClient.weatherApi
-            _weatherData.value = retrofitClient.getCurrentWeatherData(latitude, longitude)
+            try {
+            val response = RetrofitClient.weatherApi.getCurrentWeatherData(latitude,longitude)
+            if (response.isSuccessful) {
+                Log.d("WeatherViewModel", "fetchData: ${response.body()}")
+                _weatherData.value = response.body()?.current
+            }
+            else {
+                Log.e("WeatherViewModel", "fetchData: ${response.errorBody()?.string()} ")
+                }
+            }
+            catch (e : Exception) {
+                e.printStackTrace()
+            }
         }
     }
 }
