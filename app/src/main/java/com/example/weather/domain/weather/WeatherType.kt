@@ -3,6 +3,7 @@ package com.example.weather.domain.weather
 import androidx.annotation.DrawableRes
 import com.example.weather.R
 
+
 sealed class WeatherType (
     val weatherDesc: String,
     @DrawableRes weatherTypeImg: Int

@@ -4,8 +4,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -14,14 +12,15 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.weather.R
 import com.example.weather.ui.theme.Typography
 import com.example.weather.ui.theme.components.LocationTextButton
 import com.example.weather.ui.theme.linearColorList
 
 @Composable
-fun HomeSizeBarScreen() {
+fun HomeSizeBarScreen(navController: NavController) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
@@ -61,5 +60,5 @@ fun HomeSizeBarScreen() {
 @Preview
 @Composable
 fun HomeSizeBarScreenPreview() {
-    HomeSizeBarScreen()
+    HomeSizeBarScreen(navController = rememberNavController())
 }

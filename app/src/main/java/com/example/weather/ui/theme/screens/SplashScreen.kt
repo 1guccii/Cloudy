@@ -15,12 +15,14 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.weather.R
 import com.example.weather.ui.theme.Typography
 import com.example.weather.ui.theme.linearColorList
 
 @Composable
-fun SplashScreen() {
+fun SplashScreen(navController: NavController) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
@@ -31,6 +33,7 @@ fun SplashScreen() {
     ) {
             Image(painter = painterResource(id = R.drawable.cloud), contentDescription = null, modifier = Modifier.scale(2.5f))
             Text(text = stringResource(id =R.string.app_name), style = Typography.headlineLarge)
+
     }
 }
 
@@ -39,6 +42,6 @@ fun SplashScreen() {
 @Composable
 fun SplashScreenPreview() {
     Surface {
-        SplashScreen()
+        SplashScreen(navController = rememberNavController())
     }
 }

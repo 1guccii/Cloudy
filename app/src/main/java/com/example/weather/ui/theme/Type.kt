@@ -65,6 +65,44 @@ val Typography = Typography(
         color = Color(0xFF363B64),
         textAlign = TextAlign.Center,
         letterSpacing = 0.05.sp,
+    ),
+    displayMedium = TextStyle(
+        fontSize = 18.sp,
+        fontFamily = FontFamily(poppins_bold),
+        fontWeight = FontWeight(600),
+        color = Color(0xFF363B64),
+        textAlign = TextAlign.Center,
+        letterSpacing = 0.05.sp,
+    ),
+    headlineSmall = TextStyle(
+            fontSize = 14.sp,
+            fontFamily = FontFamily(poppins_regular),
+            fontWeight = FontWeight(400),
+            color = Color(0xFFA098AE),
+    ),
+    bodyMedium = TextStyle(
+        fontSize = 12.sp,
+        lineHeight = 16.sp,
+        fontFamily = FontFamily(poppins_medium),
+        fontWeight = FontWeight(400),
+        color = Color(0xFF363B64),
+        letterSpacing = 0.3.sp,
+    ),
+    labelMedium = TextStyle(
+        fontSize = 18.sp,
+        fontFamily = FontFamily(poppins_medium),
+        fontWeight = FontWeight(400),
+        color = Color(0xFF363B64),
+        letterSpacing = 0.3.sp,
+    ),
+    headlineMedium = TextStyle(
+            fontSize = 12.sp,
+            lineHeight = 16.sp,
+            fontFamily = FontFamily(poppins_medium),
+            fontWeight = FontWeight(400),
+            color = Color(0xFFA098AE),
+
+            letterSpacing = 0.3.sp,
     )
 
 )
