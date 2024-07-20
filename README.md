@@ -19,7 +19,7 @@ This Android weather app fetches and displays current weather data using Retrofi
 - **LiveData**: For observing data changes.
 - **Jetpack Compose**: For building the UI.
 - **Moshi**: For converting JSON to Kotlin data classes.
--**Kotlinx Serialization**: For serializing and deserializing JSON data.
--**Google Play Services Location**: For accessing device location information.
--**OkHttp**: For making HTTP requests and managing connections.
+- **Kotlinx Serialization**: For serializing and deserializing JSON data.
+- **Google Play Services Location**: For accessing device location information.
+- **OkHttp**: For making HTTP requests and managing connections.
 
