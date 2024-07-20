@@ -1,6 +1,6 @@
 # Cloudy - Weather App
 
-<img src="home.png" width="216" height = "480" />          <img src="forecastday.png" width="216" height = "480" />            <img src="detail.png" width="216" height = "480" />        <img src="list.png" width="216" height = "480" /> 
+<img src="home.png" width="108" height = "240" />          <img src="forecastday.png" width="108" height = "240" />            <img src="detail.png" width="108" height = "240" />        <img src="list.png" width="108" height = "240" /> 
 
 This Android weather app fetches and displays current weather data using Retrofit API, MVVM architecture, and LiveData.
 
